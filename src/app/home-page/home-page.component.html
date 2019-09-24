@@ -1,6 +1,6 @@
 <div style="display: flex" class="mt-4">
 <div class="pr-4 pt-4 col-3 ">
-  <div class="row-4 bg-info">
+  <div class="row-6 bg-info">
     <div class="px-5 py-1"><b>PRICE FILTERS!!</b></div>
 <ul style="list-style-type: none">
   <li><span><input type="checkbox"></span><span>Below 500</span></li>
@@ -11,12 +11,13 @@
 </ul>
 </div>
 </div>
-<div class="d-flex flex-wrap col-9">
-  <div *ngFor = "let a of product" class="p-4 text-center">
+<div class="d-flex flex-wrap col-9 ">
+  <div *ngFor = "let a of product" class="p-4 text-center border border-dark m-2">
     <div><img src="{{a.image}}" style="height: 150px;width: 150px"></div>
     <div  ><b>{{a.name}}</b></div>
     <div>{{a.brand}}</div>
     <div>{{a.price}}</div>
+    <button class="bg-primary" routerLink="/cart">Add To Cart</button>
   </div>
 </div>
 </div>
