@@ -34,5 +34,4 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [ServicesService],
   bootstrap: [AppComponent]
 })
-export class AppModule
-{ }
+export class AppModule { }

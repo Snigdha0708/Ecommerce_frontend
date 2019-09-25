@@ -1,1 +1,17 @@
-<p>product-details works!</p>
+<div *ngFor="let a of prod">
+<div style="display: flex;" class="m-3">
+  <div><img src="{{a.image}}" style="height: 300px; width: 300px;" class="pr-5"></div>
+  <div style="" class="pl-5">
+    <div><b>{{a.name}}</b></div>
+    <div>{{a.brand}}</div>
+    <div>{{a.price}}</div>
+    <div><b>PRODUCT DETAILS:-</b></div>
+    <div>{{a.details}}</div>
+    <div><b>SIZE DETAILS:</b></div>
+    <div>{{a.size}}</div>
+    <div><b>MATERIAL INFO:-</b></div>
+    <div>{{a.material}}</div>
+    <div routerLink="/cart"><button class="button bg-primary">ADD TO CART!!</button></div>
+  </div>
+</div>
+</div>
