@@ -15,7 +15,10 @@
            <a class="nav-link" href="#" routerLink="/cart"><span class="pr-1"><i class="fa fa-shopping-cart text-light"></i></span><span>My Cart</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#"><span class="pr-1"><i class="fa fa-sign-out text-light"></i></span><span>Logout</span></a>
+          <a class="nav-link" [routerLink]="['/login/']"><span class="pr-1"><i class="fa fa-sign-out text-light"></i></span><span>LogIn</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><span class="pr-1"><i class="fa fa-sign-out text-light"></i></span><span>SignUp</span></a>
         </li>
       </ul>
     </nav>

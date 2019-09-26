@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServicesService} from '../services.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -8,11 +9,15 @@ import {ServicesService} from '../services.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private abc: ServicesService) { }
+  constructor(private abc: ServicesService, private router: Router) { }
   prod;
   ngOnInit() {
     this.abc.getDetails().subscribe(data => {
       this.prod = data;
     });
-  }}
+  }
+  goToDetails(namea) {
+    this.router.navigate(['/productInfo'], {queryParams: {namea}});
+  }
+}
 

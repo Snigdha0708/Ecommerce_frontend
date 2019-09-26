@@ -13,7 +13,7 @@
 </div>
 <div class="d-flex flex-wrap col-9 ">
   <div *ngFor = "let a of prod" class="p-4 text-center border border-dark m-2">
-    <div routerLink="/productInfo"><img src="{{a.image}}" style="height: 150px;width: 150px"></div>
+    <div ><img (click)="goToDetails(a.name)" src="{{a.image}}" style="height: 150px;width: 150px"></div>
     <div  ><b>{{a.name}}</b></div>
     <div>{{a.brand}}</div>
     <div>{{a.price}}</div>
