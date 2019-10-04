@@ -6,10 +6,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ServicesService {
 
-  constructor(private http: HttpClient) { }
-   getDetails()
-   {
-      const url = './assets/Prod.json';
-      return this.http.get(url);
-   }
+  constructor(private http: HttpClient) {
+  }
+
+  getDetails() {
+    const url = 'http://localhost:2020/item/prodetails';
+    return this.http.get(url);
+  }
 }

@@ -1,38 +1,25 @@
-<div class="d-flex justify-content-between m-auto bg-dark ">
-  <div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-0">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><marquee><span class="pr-2"><i class="fa fa-shopping-bag"></i></span>Shop&Shop</marquee></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-0">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-           <a class="nav-link" href="#" routerLink="/cart"><span class="pr-1"><i class="fa fa-shopping-cart text-light"></i></span><span>My Cart</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/login/']"><span class="pr-1"><i class="fa fa-sign-out text-light"></i></span><span>LogIn</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><span class="pr-1"><i class="fa fa-sign-out text-light"></i></span><span>SignUp</span></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
-<div class="d-flex justify-content-around py-2 bg-info">
-  <nav><form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><span class="pr-1"><i class="fa fa-search"></i></span>Search</button>
-  </form></nav>
-</div>
-<div class="d-flex bg-dark text-light">
- <div class="px-4 border border-light  col-3" routerLink="/home">HOME</div>
-  <div class="px-4 border border-light  col-3">CLOTHING</div>
-  <div class="px-4 border border-light  col-3">SHOES</div>
-  <div class="px-4 border border-light  col-3">SPORTS</div>
+<div>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <a class="navbar-brand head" routerLink="/home">
+     <marquee>Shop&Shop</marquee>
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+
+          </div></div>
+      </form>
+
+      <div class="navbar-nav t" style="padding-left: 660px;">
+        <a routerLink="/login" class="nav-item nav-link"><i class="fa fa-sign-in pr-1"></i>Login</a>
+        <a routerLink="/signup" class="nav-item nav-link"><i class="fa fa-user-plus pr-1"></i>Sign Up</a>
+        <a routerLink="/profile" class="nav-item nav-link"><i class="fa fa-user pr-1"></i>My Profile</a>
+      </div>
+  </nav>
 </div>

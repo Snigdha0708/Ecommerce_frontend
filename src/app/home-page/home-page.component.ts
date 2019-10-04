@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ServicesService} from '../services.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {HomePageService} from './home-page.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,15 +10,57 @@ import {Router} from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private abc: ServicesService, private router: Router) { }
+  constructor(private abc: HomePageService, private router: Router, private route: ActivatedRoute) {
+  }
+
   prod;
+  names;
+  cp;
   ngOnInit() {
     this.abc.getDetails().subscribe(data => {
-      this.prod = data;
+      this.names = data;
     });
   }
-  goToDetails(namea) {
-    this.router.navigate(['/productInfo'], {queryParams: {namea}});
+  onSelect(product) {
+    this.router.navigate(['/home' , product.productId]);
   }
-}
+  showClothing() {
+    this.cp = 'Clothing';
+    this.abc.getByCat('Clothing').subscribe(data1 => {this.names = data1;
+    });
+   }
+   showShoes() {
+     this.cp = 'Shoes';
+     this.abc.getByCat('Shoes').subscribe(
+       data2 => {
+         this.names = data2;
+     },
+       error => {
+         console.log(error);
+       });
+   }
+   showSports() {
+    this.cp = 'Sports';
+    this.abc.getByCat('Sports').subscribe(data3 => {this.names = data3;
+     });
+   }
+   showHome() {
+     this.cp = null;
+     this.abc.getDetails().subscribe(data4 => {
+       this.names = data4;
+     });
+   }
+       showAll(p1, p2) {
+        if (!this.cp) {
+          this.abc.getByPrice( p1, p2).subscribe(data5 => {
+            this.names = data5;
+          });
+        } else  {
+          this.abc.getByCatAndPrice(this.cp, p1 , p2).subscribe( data6 => {
+            this.names = data6;
+          });
+        }
+       }
+   }
+
 

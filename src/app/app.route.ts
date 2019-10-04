@@ -15,7 +15,7 @@ export const MAIN_ROUTES: Routes = [
     component: UserCartComponent,
   },
   {
-    path: 'productInfo',
+    path: 'home/:productId',
     component: ProductDetailsComponent,
   },
   {

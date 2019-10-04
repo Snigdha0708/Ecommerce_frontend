@@ -13,6 +13,10 @@ import { UserCartComponent } from './user-cart/user-cart.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {ServicesService} from './services.service';
 import {HttpClientModule} from '@angular/common/http';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import {HomePageService} from './home-page/home-page.service';
+import {ProductDetailsService} from './product-details/product-details.service';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
     ProductDetailsComponent,
     ProductListComponent,
     SignUpComponent,
-    UserCartComponent
+    UserCartComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import {HttpClientModule} from '@angular/common/http';
     AngularFontAwesomeModule,
     HttpClientModule
   ],
-  providers: [ServicesService],
+  providers: [HomePageService, ProductDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
