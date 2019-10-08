@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ServicesService} from '../services.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HomePageService} from './home-page.service';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-home-page',
@@ -10,13 +11,16 @@ import {HomePageService} from './home-page.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private abc: HomePageService, private router: Router, private route: ActivatedRoute) {
+  constructor(private abc: HomePageService, private router: Router, private route: ActivatedRoute, private sevice: AppService) {
   }
 
   prod;
   names;
   cp;
   ngOnInit() {
+    if (!this.sevice.checkLogin()) {
+      this.router.navigate(['login']);
+    }
     this.abc.getDetails().subscribe(data => {
       this.names = data;
     });
@@ -60,6 +64,10 @@ export class HomePageComponent implements OnInit {
             this.names = data6;
           });
         }
+       }
+       logout() {
+         this.sevice.isLoggedIn(false);
+         this.router.navigate(['login']);
        }
    }
 

@@ -16,10 +16,11 @@
           </div></div>
       </form>
 
-      <div class="navbar-nav t" style="padding-left: 660px;">
+      <div class="navbar-nav t" style="padding-left: 600px;">
         <a routerLink="/login" class="nav-item nav-link"><i class="fa fa-sign-in pr-1"></i>Login</a>
         <a routerLink="/signup" class="nav-item nav-link"><i class="fa fa-user-plus pr-1"></i>Sign Up</a>
         <a routerLink="/profile" class="nav-item nav-link"><i class="fa fa-user pr-1"></i>My Profile</a>
+        <a  class="nav-item nav-link" (click)="logout()"><i class="fa fa-sign-out pr-1"></i>Logout</a>
       </div>
   </nav>
 </div>

@@ -16,6 +16,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import {HomePageService} from './home-page/home-page.service';
 import {ProductDetailsService} from './product-details/product-details.service';
+import {AuthenticationService} from './authentication.service';
+import {AppService} from './app.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -34,9 +37,10 @@ import {ProductDetailsService} from './product-details/product-details.service';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [HomePageService, ProductDetailsService],
+  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
