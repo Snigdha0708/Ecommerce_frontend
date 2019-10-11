@@ -16,7 +16,7 @@ export class AuthenticationService {
       }
       ));
   }
-  logOutService(){
+  logOutService() {
     sessionStorage.removeItem('token');
   }
 }

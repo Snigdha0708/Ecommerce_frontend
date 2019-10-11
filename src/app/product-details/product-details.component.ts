@@ -8,11 +8,9 @@ import {ProductDetailsService} from './product-details.service';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss']
 })
-export class ProductDetailsComponent implements OnInit
-{
+export class ProductDetailsComponent implements OnInit {
 id1;
-constructor(private det: ProductDetailsService , private router: Router , private route: ActivatedRoute)
-{}
+constructor(private det: ProductDetailsService , private router: Router , private route: ActivatedRoute) {}
 prductDetails;
 ngOnInit() {
   this.route.paramMap.subscribe((params: ParamMap) => {
@@ -21,5 +19,10 @@ ngOnInit() {
   }),
     this.det.goToDetails(this.id1).subscribe((data) => {this.prductDetails = data;
     });
+}
+addCart() {
+  this.det.addtocart(this.id1).subscribe( data2 => {
+    this.prductDetails = data2 ; this.router.navigate(['cart']);
+  });
 }
 }

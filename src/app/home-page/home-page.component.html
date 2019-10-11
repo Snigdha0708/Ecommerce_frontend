@@ -3,6 +3,7 @@
 </head>
 <body>
 
+
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -42,22 +43,22 @@
         <label>Price:</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" id="" (click)="showAll(0, 500)"> Less than ₹500</label>
+        <label><input type="radio" name="range" id="" (click)="showAll(0, 500)" [(ngModel)]="filter" value="a1"> Less than ₹500</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" (click)="showAll(501, 1000)"> ₹500 - ₹1000 </label>
+        <label><input type="radio" name="range" (click)="showAll(501, 1000)" [(ngModel)]="filter" value="a2"> ₹500 - ₹1000 </label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" (click)="showAll(1001, 2000)"> ₹1000 - ₹2000 </label>
+        <label><input type="radio" name="range" (click)="showAll(1001, 2000)" [(ngModel)]="filter" value="a3"> ₹1000 - ₹2000 </label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" (click)="showAll(2001, 3000)">₹2000 - ₹3000</label>
+        <label><input type="radio" name="range" (click)="showAll(2001, 3000)" [(ngModel)]="filter" value="a4">₹2000 - ₹3000</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" (click)="showAll(3001, 5000)">₹3000 - ₹5000</label>
+        <label><input type="radio" name="range" (click)="showAll(3001, 5000)" [(ngModel)]="filter" value="a5">₹3000 - ₹5000</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="range" (click)="showAll(5001, 10000)">Above ₹5000</label>
+        <label><input type="radio" name="range" (click)="showAll(5001, 10000)" [(ngModel)]="filter" value="a6">Above ₹5000</label>
       </div>
     </form>
 </div>

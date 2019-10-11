@@ -17,6 +17,7 @@ export class HomePageComponent implements OnInit {
   prod;
   names;
   cp;
+  filter;
   ngOnInit() {
     if (!this.sevice.checkLogin()) {
       this.router.navigate(['login']);
@@ -30,11 +31,13 @@ export class HomePageComponent implements OnInit {
   }
   showClothing() {
     this.cp = 'Clothing';
+    this.filter = null;
     this.abc.getByCat('Clothing').subscribe(data1 => {this.names = data1;
     });
    }
    showShoes() {
      this.cp = 'Shoes';
+     this.filter = null;
      this.abc.getByCat('Shoes').subscribe(
        data2 => {
          this.names = data2;
@@ -45,11 +48,13 @@ export class HomePageComponent implements OnInit {
    }
    showSports() {
     this.cp = 'Sports';
+    this.filter = null;
     this.abc.getByCat('Sports').subscribe(data3 => {this.names = data3;
      });
    }
    showHome() {
      this.cp = null;
+     this.filter = null;
      this.abc.getDetails().subscribe(data4 => {
        this.names = data4;
      });

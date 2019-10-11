@@ -14,16 +14,15 @@ export class SignUpComponent implements OnInit {
   //username;
   email;
   password;
-  url = 'http://localhost:2020/abc/somedata';
+
   ngOnInit() {
     if (this.abc.checkLogin()) {
       this.router.navigate(['/home']);
     }
   }
   finalData() {
-    const ar = {email: this.email,  password: this.password};
     //const json = JSON.stringify(ar);
-    this.http.post(this.url, ar).subscribe(data => {
+    return this.http.post( 'http://localhost:2020/abc/somedata', {email: this.email,  password: this.password}).subscribe(data => {
       //console.log(json);
       this.router.navigate(['/login']);
     });

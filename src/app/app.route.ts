@@ -19,11 +19,11 @@ export const MAIN_ROUTES: Routes = [
     component: ProductDetailsComponent,
   },
   {
-    path:'signup',
-    component:SignUpComponent,
+    path: 'signup',
+    component: SignUpComponent,
   },
   {
     path: 'login',
-    component:LoginComponent,
+    component: LoginComponent,
   }
 ];
