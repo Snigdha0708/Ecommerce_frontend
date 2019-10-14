@@ -1,0 +1,23 @@
+
+
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
+  <input type="text" class="form-control border-0 w-75 " id="usr" placeholder="Enter category" name="category" [(ngModel)]="category" >
+</div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
+  <input type="text" class="form-control border-0 w-75 " id="pwd" placeholder="Enter product Name" name="name" [(ngModel)]="name" >
+</div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
+  <input type="number" class="form-control border-0 w-75 " id="em" placeholder="Enter price" name="price" [(ngModel)]="price" >
+</div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 ">
+  <input type="text" class="form-control border-0 w-75 " id="em1" placeholder="Enter subcategory" name="subcategory" [(ngModel)]="subcategory">
+</div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 ">
+  <input type="text" class="form-control border-0 w-75 " id="contact" placeholder="Enter image source" name="image" [(ngModel)]="image">
+</div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 d-flex justify-content-start">
+  <div class="pl-0"><input type="text" class="form-control border-0 w-100 text-left" id="text" placeholder="Enter product details" name="details" [(ngModel)]="details">
+  </div></div>
+<div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 d-flex justify-content-start">
+<div><button class="bg-dark text-light" (click)="saveData()">Add product</button></div>
+</div>

@@ -1,14 +1,37 @@
 <div style="display: flex">
-  <div class="p-5">
+  <div class="p-5 mt-5">
 <img src="{{prductDetails.image}}" height="300px;" width="300px;">
+   <div style="display: flex" class="p-2"> <div class="px-2">
+      <button class="btn btn-dark " (click)="edit(prductDetails.productId)">Save</button>
+    </div>
+    <div class="px-2">
+      <button class="btn btn-dark " (click)="toggle()">Edit Details</button>
+    </div></div>
   </div>
   <div class="p-5">
-    <div class="font-weight-bolder p-2">{{prductDetails.name}}</div>
-    <div class="p-2">{{prductDetails.category}}</div>
-    <div class="abcd p-1"><b>Details:</b></div>
-    <div class="pb-2">{{prductDetails.details}}</div>
-    <div class="p-2">₹{{prductDetails.price}}</div>
-    <div class="p-2 "><button class="bg-dark text-white" (click)="addCart()">ADD TO CART</button></div>
+    <div class="mb-4">
+      <h4>Name :-</h4>
+      <input type="address" value="{{prductDetails.name}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="prductDetails.name">
+    </div>
+    <div class="mb-4">
+      <h4>Category :-</h4>
+      <input type="address" value="{{prductDetails.category}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="prductDetails.category">
+    </div>
+    <div class="mb-4">
+      <h4>SubCategory :-</h4>
+      <input type="address" value="{{prductDetails.subcategory}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="prductDetails.subcategory">
+    </div>
+    <div class="mb-4">
+      <h4>Price :-</h4>
+      <input type="address" value="{{prductDetails.price}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="prductDetails.price">
+    </div>
+    <div class="mb-4">
+      <h4>Details :-</h4>
+      <input type="address" value="{{prductDetails.address}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="prductDetails.details">
+    </div>
+   <div><button (click)="addCart()" class="bg-dark text-light">Add to Cart</button></div>
   </div>
 </div>
+
+
 

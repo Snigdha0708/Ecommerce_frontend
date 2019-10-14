@@ -25,6 +25,7 @@ export class MyProfileComponent implements OnInit {
     return this.http.put(this.url, this.myp, {headers}).subscribe(data => {
       console.log(data);
       this.router.navigate(['/myprofile']);
+      this.disabled = true;
     });
 }
  toggle() {

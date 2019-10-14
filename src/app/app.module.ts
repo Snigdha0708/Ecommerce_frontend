@@ -20,7 +20,8 @@ import {AuthenticationService} from './authentication.service';
 import {AppService} from './app.service';
 import {FormsModule} from '@angular/forms';
 import { OrderHistoryComponent } from './order-history/order-history.component';
-import { CartFullComponent } from './cart-full/cart-full.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import {MyProfileService} from './my-profile/my-profile.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { CartFullComponent } from './cart-full/cart-full.component';
     UserCartComponent,
     MyProfileComponent,
     OrderHistoryComponent,
-    CartFullComponent
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,7 @@ import { CartFullComponent } from './cart-full/cart-full.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService],
+  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService, MyProfileService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

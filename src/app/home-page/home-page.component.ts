@@ -18,6 +18,7 @@ export class HomePageComponent implements OnInit {
   names;
   cp;
   filter;
+  see;
   ngOnInit() {
     if (!this.sevice.checkLogin()) {
       this.router.navigate(['login']);
@@ -74,6 +75,11 @@ export class HomePageComponent implements OnInit {
          this.sevice.isLoggedIn(false);
          this.router.navigate(['login']);
        }
+  seename() {
+    this.abc.searchProduct(this.see).subscribe((data) => {
+      this.names = data;
+    });
+  }
    }
 
 

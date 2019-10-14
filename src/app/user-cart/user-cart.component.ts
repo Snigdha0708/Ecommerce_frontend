@@ -71,6 +71,11 @@ export class UserCartComponent implements OnInit {
       });
     });
   }
+  getDetails(productId) {
+    this.abc.goToDetails(productId).subscribe( data => {
+      this.router.navigate(['/home/' + productId]);
+    });
+  }
   }
 
 

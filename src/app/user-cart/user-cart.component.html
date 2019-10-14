@@ -1,4 +1,4 @@
-<div class="p-5">
+<div class="p-5" *ngIf="prod.length>0">
 <table  class="table table-striped">
   <tr>
     <th>Images</th>
@@ -9,7 +9,7 @@
     <th>Remove</th>
   </tr>
   <tr *ngFor="let a of prod">
-   <td class="p-5"><img src="{{a.items.image}}" height="120px" width="120px"></td>
+   <td class="p-5 b"><img src="{{a.items.image}}" height="120px" width="120px" (click)="getDetails(a.items.productId)"></td>
     <td class="p-5">{{a.items.name}}</td>
     <td class="p-5">{{a.items.category}}</td>
     <td class="p-5">₹{{a.items.price}}</td>
@@ -23,4 +23,8 @@
     <div><button routerLink="/home" class="bg-dark text-white">Continue Shopping</button></div>
     <div class="pr-5"><button routerLink="/Thankyou" class="bg-dark text-white">Checkout</button></div>
   </div>
+</div>
+<div *ngIf="prod.length<=0">
+  <div>CART EMPTY!!!</div>
+  <button class="bg-dark text-light" routerLink="/home">Continue Shopping</button>
 </div>
