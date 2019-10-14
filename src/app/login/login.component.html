@@ -1,8 +1,6 @@
 <head><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></head>
-<body><div class="two w-50 mx-auto mb-5 pb-4" style="background-color: blue;">
-  <div class=" text-center py-3 px-3">
-    <button type="button" class="close text-white" data-dismiss="alert">&times;</button>
-  </div>
+<body><div class="two w-50  m-5  bg-dark text-light text-center">
+
   <div class="px-auto py-4  text-center">
     <h2>
       LOGIN
@@ -16,11 +14,11 @@
     <i class="material-icons text-dark pr-4">fingerprint</i>
     <input type="password" class="form-control border-0 w-75 " id="pwd" placeholder="Password" name="Username" [(ngModel)]="password">
   </div>
-  <div class="w-75 text-white mx-auto text-center py-2 mt-5" style="background-color:#19B8CD;">
+  <div class="w-75 text-dark mx-auto text-center py-2 mt-5 bg-light">
     <button style="background-color: rgba(0,0,0,0);border: none;" (click)="login()" >LOGIN</button>
   </div>
-  <div class="w-75 text-white mx-auto text-center mt-2 mb-5">
-    Forgot Password?
+  <div class="w-75 text-white mx-auto text-center mt-2 mb-5 pb-3">
+    Don't have an account?<span><a  routerLink="/signup">SignUp</a></span>
   </div>
 </div>
 </body>

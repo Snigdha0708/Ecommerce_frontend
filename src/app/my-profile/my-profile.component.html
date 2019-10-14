@@ -1,1 +1,26 @@
-<p>my-profile works!</p>
+
+<div class=" ml-2" *ngIf="myp">
+    <div class="mb-4">
+      <h4>Full Name :-</h4>
+      <input type="text" value="{{myp.name}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="myp.name">
+    </div>
+    <div class="mb-4">
+      <h4>Phone :-</h4>
+      <input type="number" value="{{myp.contact}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="myp.contact">
+    </div>
+    <div class="mb-4">
+      <h4>Address :-</h4>
+      <input type="address" value="{{myp.address}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="myp.address">
+    </div>
+  </div>
+<div class="d-flex justify-content-start">
+  <div class="p-5">
+  <button class="btn btn-dark " (click)="edit()">Save</button>
+  </div>
+   <div class="p-5">
+     <button class="btn btn-dark " (click)="toggle()">Edit Profile</button>
+   </div>
+   <div class="p-5">
+     <button class="btn btn-dark " routerLink="/orderHistory">Order History</button>
+   </div>
+</div>

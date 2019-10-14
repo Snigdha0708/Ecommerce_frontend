@@ -1,20 +1,18 @@
 <head><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></head>
-<body><div class="two w-50 mx-auto mb-5 pb-4" style="background-color: blue;">
-  <div class=" text-center py-3 px-3">
-    <button type="button" class="close text-white" data-dismiss="alert">&times;</button>
-  </div>
-  <div class="px-auto py-4  text-center">
-    <h2>
-      SIGN UP!!!
+<body><div class="two w-50 mx-auto m-5 pb-4 bg-dark">
+  <div class="px-auto py-4  text-center text-light">
+    <h2 class="a">
+      SIGN UP!!!(Shop&Shop)
     </h2>
   </div>
+  <div class="text-white ab"><marquee>Be our customer!!!</marquee></div>
   <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
     <i class="material-icons text-dark pr-4">perm_identity</i>
-    <input type="Username" class="form-control border-0 w-75 " id="usr" placeholder="Username" name="Username" [(ngModel)]="username" >
+    <input type="Name" class="form-control border-0 w-75 " id="usr" placeholder="Enter Full Name" name="name" [(ngModel)]="name" >
   </div>
   <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
     <i class="material-icons text-dark pr-4">fingerprint</i>
-    <input type="password" class="form-control border-0 w-75 " id="pwd" placeholder="Password" name="Username" [(ngModel)]="password" >
+    <input type="password" class="form-control border-0 w-75 " id="pwd" placeholder="Password" name="password" [(ngModel)]="password" >
   </div>
   <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3">
     <i class="material-icons text-dark pr-4">email</i>
@@ -22,14 +20,19 @@
   </div>
   <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 ">
     <i class="material-icons text-dark pr-4">email</i>
-    <input type="email" class="form-control border-0 w-75 " id="em1" placeholder="Confirm Email id" name="Confirm Email-address" [(ngModel)]="email">
+    <input type="email" class="form-control border-0 w-75 " id="em1" placeholder="Confirm Email id" name="Confirm Email-address">
   </div>
-
+  <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 ">
+    <i class="material-icons text-dark pr-4">phone</i>
+    <input type="number" class="form-control border-0 w-75 " id="contact" placeholder="Enter your phone number" name="Phone number" [(ngModel)]="contact">
+  </div>
+  <div class="w-75 bg-white mx-auto px-3 form-inline my-3 mb-3 d-flex justify-content-start">
+    <div><i class="material-icons text-dark pr-4">home</i></div>
+    <div class="pl-0"><input type="address" class="form-control border-0 w-75 text-left" id="text" placeholder="Enter address" name="Enter address" [(ngModel)]="address">
+    </div></div>
   <div class="w-75 text-white mx-auto text-center py-2 mt-5" style="background-color:#19B8CD;">
     <button style="background-color: rgba(0,0,0,0);border: none;" (click)="finalData()">SIGN UP</button>
   </div>
-  <div class="w-75 text-white mx-auto text-center mt-2 mb-5">
-    Forgot Password?
-  </div>
+
 </div>
 </body>

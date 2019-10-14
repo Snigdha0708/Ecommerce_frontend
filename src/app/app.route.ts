@@ -5,6 +5,9 @@ import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {LoginComponent} from './login/login.component';
+import {OrderHistoryComponent} from './order-history/order-history.component';
+import {ProductListComponent} from './product-list/product-list.component';
+import {MyProfileComponent} from './my-profile/my-profile.component';
 export const MAIN_ROUTES: Routes = [
   {
     path: 'home',
@@ -25,5 +28,17 @@ export const MAIN_ROUTES: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'orderHistory',
+    component: OrderHistoryComponent,
+  },
+  {
+    path: 'Thankyou',
+    component: ProductListComponent,
+  },
+  {
+    path: 'myprofile',
+    component: MyProfileComponent,
   }
 ];

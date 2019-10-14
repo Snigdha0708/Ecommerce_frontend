@@ -19,6 +19,8 @@ import {ProductDetailsService} from './product-details/product-details.service';
 import {AuthenticationService} from './authentication.service';
 import {AppService} from './app.service';
 import {FormsModule} from '@angular/forms';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { CartFullComponent } from './cart-full/cart-full.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {FormsModule} from '@angular/forms';
     ProductListComponent,
     SignUpComponent,
     UserCartComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    OrderHistoryComponent,
+    CartFullComponent
   ],
   imports: [
     BrowserModule,

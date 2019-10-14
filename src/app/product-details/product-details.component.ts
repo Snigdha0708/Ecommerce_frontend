@@ -22,7 +22,8 @@ ngOnInit() {
 }
 addCart() {
   this.det.addtocart(this.id1).subscribe( data2 => {
-    this.prductDetails = data2 ; this.router.navigate(['cart']);
+    this.prductDetails = data2 ; this.router.navigate(['/cart']);
+    alert('Item added to cart!!');
   });
 }
 }

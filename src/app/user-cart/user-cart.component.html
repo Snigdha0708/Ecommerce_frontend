@@ -1,19 +1,26 @@
 <div class="p-5">
-<table style="text-align: center;border-collapse: collapse" border="1px solid black">
-  <tr class="p-3">
+<table  class="table table-striped">
+  <tr>
     <th>Images</th>
     <th>Product Name</th>
     <th>Category</th>
     <th>Price</th>
     <th>Quantity</th>
+    <th>Remove</th>
   </tr>
-  <tr *ngFor="let a of prod" class="p-3">
+  <tr *ngFor="let a of prod">
    <td class="p-5"><img src="{{a.items.image}}" height="120px" width="120px"></td>
     <td class="p-5">{{a.items.name}}</td>
     <td class="p-5">{{a.items.category}}</td>
     <td class="p-5">₹{{a.items.price}}</td>
-    <td class="p-5"><div style="display: flex"><div><button (click)="increament(a.items.productId)">+</button></div><div  class="border border-dark"><input type="text" value="{{a.quantity}}"></div><div><button (click)="decreament1(a.items.productId)">-</button></div></div></td>
+    <td class="p-5"><div class="d-flex w-25"><div><button  (click)="increament(a.items.productId)">+</button></div><div  class="border border-dark "><input type="text" value="{{a.quantity}}" ></div><div><button (click)="decreament1(a.items.productId)">-</button></div></div></td>
     <td class="p-5"><button class="bg-danger text-light" (click)="deletecart(a.items.productId)">Remove</button></td>
   </tr>
 </table>
+<hr>
+  <div class="text-right pr-5"><b>Total price</b> = ₹{{total}}</div>
+  <div class="d-flex justify-content-between m-4">
+    <div><button routerLink="/home" class="bg-dark text-white">Continue Shopping</button></div>
+    <div class="pr-5"><button routerLink="/Thankyou" class="bg-dark text-white">Checkout</button></div>
+  </div>
 </div>

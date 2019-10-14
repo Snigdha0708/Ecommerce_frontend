@@ -12,8 +12,8 @@ import {UserCartService} from '../user-cart/user-cart.service';
 export class NavBarComponent implements OnInit {
   constructor(private service: AppService, private router: Router, private  authService: AuthenticationService) { }
   ngOnInit() {
-    if (this.service.checkLogin()) {
-      this.router.navigate(['home']);
+    if (!this.service.checkLogin()) {
+      this.router.navigate(['/login']);
     }
   }
 

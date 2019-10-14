@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Item Name</th>
+    <th>Date</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let a of prod">
+   <td>{{a.itemName}}</td>
+    <td>{{a.date}}</td>
+    <td>{{a.price}}</td>
+    <td>{{a.quantity}}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="p-3 text-center">
+  <button routerLink="/home" class="bg-dark text-light">Go To Home</button>
+</div>
+
