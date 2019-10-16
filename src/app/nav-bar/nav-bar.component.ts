@@ -12,12 +12,21 @@ import {NavBarService} from './nav-bar.service';
 })
 export class NavBarComponent implements OnInit {
   constructor(private service: AppService, private router: Router, private  authService: AuthenticationService, private abc: NavBarService) { }
+  users;
+  disabled;
   ngOnInit() {
     if (!this.service.checkLogin()) {
       this.router.navigate(['/login']);
     }
+    this.abc.getUsers().subscribe( data => {
+      this.users = data;
+      console.log(this.users.authorisation);
+      if (this.users.authorisation === 'admin') {
+        this.disabled = true;
+        console.log(this.disabled);
+      }
+    });
   }
-
   logout() {
     this.service.isLoggedIn(false);
     this.router.navigate(['login']);

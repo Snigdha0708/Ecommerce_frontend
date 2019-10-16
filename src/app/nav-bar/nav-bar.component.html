@@ -9,7 +9,7 @@
     </button>
     </div>
 
-<div>
+<div *ngIf="disabled">
       <div class="navbar-nav t" >
        <!-- <a routerLink="/login" class="nav-item nav-link"><i class="fa fa-sign-in pr-1"></i>Login</a>
         <a routerLink="/signup" class="nav-item nav-link"><i class="fa fa-user-plus pr-1"></i>Sign Up</a>!-->
@@ -19,5 +19,12 @@
         <a class="nav-item nav-link" routerLink="/addproduct"><i class="fa fa-plus pr-1">Add Product</i> </a>
       </div>
 </div>
+    <div *ngIf="!disabled">
+      <div class="navbar-nav t" >
+      <a routerLink="/myprofile" class="nav-item nav-link"><i class="fa fa-user pr-1"></i>My Profile</a>
+      <a  class="nav-item nav-link" (click)="logout()"><i class="fa fa-sign-out pr-1"></i>Logout</a>
+      <a class="nav-item nav-link" routerLink="/cart"><i class="fa fa-shopping-bag pr-1">Cart</i></a>
+    </div>
+    </div>
   </nav>
 </div>

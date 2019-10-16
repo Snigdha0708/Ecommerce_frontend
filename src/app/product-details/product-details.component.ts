@@ -14,6 +14,8 @@ id1;
 constructor(private det: ProductDetailsService , private router: Router , private route: ActivatedRoute, private http: HttpClient) {}
 prductDetails;
 disabled = true;
+users;
+dis;
 ngOnInit() {
   this.route.paramMap.subscribe((params: ParamMap) => {
     const id = parseInt(params.get('productId'));
@@ -21,6 +23,14 @@ ngOnInit() {
   }),
     this.det.goToDetails(this.id1).subscribe((data) => {this.prductDetails = data;
     });
+  this.det.getUsers().subscribe( data => {
+    this.users = data;
+    console.log(this.users.authorisation);
+    if (this.users.authorisation === 'admin') {
+      this.dis = true;
+      console.log(this.disabled);
+    }
+  });
 }
 addCart() {
   this.det.addtocart(this.id1).subscribe( data2 => {

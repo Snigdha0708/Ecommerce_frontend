@@ -12,4 +12,10 @@ export class NavBarService {
     const url = 'http://localhost:2020/item/search/' + name;
     return this.http.get(url, {headers});
   }
+  getUsers() {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + token});
+    const  url = 'http://localhost:2020/myprofile/get';
+    return this.http.get(url, {headers});
+  }
 }

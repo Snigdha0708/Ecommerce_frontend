@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     this.authService.authenticate(this.username, this.password).subscribe(
       data => {
         this.service.isLoggedIn(true);
+        alert('Thank you for logging in');
         this.router.navigate(['home']);
       }
     );
