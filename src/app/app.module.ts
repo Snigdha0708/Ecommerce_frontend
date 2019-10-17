@@ -22,6 +22,7 @@ import {FormsModule} from '@angular/forms';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import {MyProfileService} from './my-profile/my-profile.service';
+import { ViewUsersComponent } from './view-users/view-users.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {MyProfileService} from './my-profile/my-profile.service';
     UserCartComponent,
     MyProfileComponent,
     OrderHistoryComponent,
-    AddProductComponent
+    AddProductComponent,
+    ViewUsersComponent
   ],
   imports: [
     BrowserModule,

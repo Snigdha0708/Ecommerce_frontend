@@ -31,7 +31,7 @@ export class AddProductComponent implements OnInit {
     price : this.price,
     details : this.details
   };
-    this.abc.AddProduct(data).subscribe( data1 => {});
+    this.abc.AddProduct(data).subscribe( data1 => {console.log(data1)});
     alert('Product added successfully!!!');
   }
 }

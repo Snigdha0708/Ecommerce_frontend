@@ -68,8 +68,8 @@
     </form>
 </div>
 </div>
-<div class="d-flex flex-wrap col-9" *ngIf="names.length>0">
-  <div *ngFor = "let a of names" class="p-4 text-center border border-dark border-rounded m-2 an">
+<div class="d-flex flex-wrap col-9 " *ngIf="names.length>0">
+  <div *ngFor = "let a of names" class="p-4 text-center border border-dark border-rounded m-2 an u">
     <div ><img src="{{a.image}}" style="height: 200px;width: 250px" alt="Image"></div>
     <div  ><b>{{a.name}}</b></div>
     <div>₹{{a.price}}</div>
@@ -80,7 +80,7 @@
     <div>No data found!!!</div>
   </div>
 </div>
-
+<div class="abc text-center bg-warning mt-5">HAPPY CLIENTS!!!</div>
 <marquee>
   <div class="py-4 px-4 d-flex of">
     <div class="rounded bg-dark text-light mx-3 hi text-center">
