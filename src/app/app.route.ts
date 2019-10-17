@@ -9,6 +9,7 @@ import {OrderHistoryComponent} from './order-history/order-history.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {MyProfileComponent} from './my-profile/my-profile.component';
 import {AddProductComponent} from './add-product/add-product.component';
+import {ViewUsersComponent} from './view-users/view-users.component';
 export const MAIN_ROUTES: Routes = [
   {
     path: 'home',
@@ -45,5 +46,9 @@ export const MAIN_ROUTES: Routes = [
   {
     path: 'addproduct',
     component: AddProductComponent,
+  },
+  {
+    path: 'viewUsers',
+    component: ViewUsersComponent,
   }
 ];

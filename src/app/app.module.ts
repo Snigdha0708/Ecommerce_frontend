@@ -23,6 +23,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import {MyProfileService} from './my-profile/my-profile.service';
 import { ViewUsersComponent } from './view-users/view-users.component';
+import {ViewUsersService} from './view-users/view-users.service';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { ViewUsersComponent } from './view-users/view-users.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService, MyProfileService ],
+  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService, MyProfileService, ViewUsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

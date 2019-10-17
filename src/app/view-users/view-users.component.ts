@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ViewUsersService} from './view-users.service';
+
 
 @Component({
   selector: 'app-view-users',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewUsersComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private abc: ViewUsersService) { }
+  users;
   ngOnInit() {
+    this.abc.getAllUsers().subscribe( data => {
+      this.users = data;
+    });
   }
 
 }
