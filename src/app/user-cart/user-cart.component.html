@@ -13,7 +13,7 @@
     <td >{{a.items.name}}</td>
     <td >{{a.items.category}}</td>
     <td>₹{{a.items.price}}</td>
-    <td ><div class="d-flex w-25 justify-content-start "><div><button class="h-100" (click)="increament(a.items.productId)">+</button></div><div  class="border border-dark  "><input type="text" value="{{a.quantity}}" ></div><div><button (click)="decreament1(a.items.productId)">-</button></div></div></td>
+    <td ><div class="d-flex w-25 justify-content-start "><div><button class="h-100" (click)="increament(a.items.productId)">+</button></div><div  class="border border-dark  "><input type="text" value="{{a.quantity}}" class="text-center"></div><div><button class="h-100" (click)="decreament1(a.items.productId)">-</button></div></div></td>
     <td><button class="bg-danger text-light" (click)="deletecart(a.items.productId)">Remove</button></td>
   </tr>
 </table>
