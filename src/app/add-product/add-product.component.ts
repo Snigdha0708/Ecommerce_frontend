@@ -31,7 +31,16 @@ export class AddProductComponent implements OnInit {
     price : this.price,
     details : this.details
   };
-    this.abc.AddProduct(data).subscribe( data1 => {console.log(data1)});
-    alert('Product added successfully!!!');
+    if (this.name ==  null && this.category == null && this.subcategory == null && this.price == null && this.image == null && this.details == null) {
+      alert('Empty fields!!');
+    } else {
+      if(this.price <= 0) {
+        alert('Invalid price!!');
+      } else {
+        this.abc.AddProduct(data).subscribe(data1 => {
+          console.log(data1);
+        });
+        alert('Product added successfully!!!');
+      }
   }
-}
+} }

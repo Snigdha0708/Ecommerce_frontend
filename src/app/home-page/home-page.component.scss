@@ -5,6 +5,8 @@ font-family: Impact, Charcoal, sans-serif;
 {
   background-color: black;
   color: aliceblue;
+  padding-right: 90px;
+  padding-left: 90px;
 }
 .o
 {
@@ -25,4 +27,12 @@ font-family: Impact, Charcoal, sans-serif;
 .fi
 {
   position: sticky;
+}
+.ofc
+{
+  display: flex;
+}
+.c
+{
+  height: 250px;width: 250px;border-radius: 25px;
 }
