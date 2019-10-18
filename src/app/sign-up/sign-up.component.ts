@@ -26,15 +26,16 @@ export class SignUpComponent implements OnInit {
   finalData() {
     //const json = JSON.stringify(ar);
     return this.http.post( 'http://localhost:2020/abc/somedata', {email: this.email,  password: this.password, name: this.name, address: this.address, contact: this.contact}).subscribe(data => {
-      if (this.cemail === null || this.email === null || this.password === null || this.address === null || this.contact === null || this.name === null) {
-        alert('Re-enter the details!!!');
-      } else {
+      if (this.cemail != null && this.email != null && this.password != null && this.address != null && this.contact != null && this.name != null) {
+
         if (this.email !== this.cemail) {
           alert('Re-enter the email');
         } else {
           this.router.navigate(['/login']);
           alert('Thanku for signup!!!');
         }
+      } else {
+        alert('Re-enter details');
       }
     });
   }
