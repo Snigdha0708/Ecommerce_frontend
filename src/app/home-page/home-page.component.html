@@ -31,7 +31,7 @@
 
 <div style="display: flex" class="text-center mt-5 bg-dark text-light p-1">
   <div class="px-5 pt-1 abc"> <marquee>Search for specific product:</marquee></div>
-  <div> <input type="text" class="form-control" placeholder="Search" [(ngModel)]="see" ></div>
+  <div> <input type="text" class="form-control" placeholder="Search" [(ngModel)]="see" (keypress)="seename()"></div>
   <div> <button type="button" class="btn btn-secondary" (click)="seename()"><i class="fa fa-search"></i></button></div>
 </div>
 <div class="an d-flex flex-wrap pt-3 fi">
