@@ -25,6 +25,7 @@ import {MyProfileService} from './my-profile/my-profile.service';
 import { ViewUsersComponent } from './view-users/view-users.component';
 import {ViewUsersService} from './view-users/view-users.service';
 import {SignUpService} from './sign-up/sign-up.service';
+import {HttpService} from './http.service';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import {SignUpService} from './sign-up/sign-up.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService, MyProfileService, ViewUsersService, SignUpService],
+  providers: [HomePageService, ProductDetailsService, AuthenticationService, AppService, MyProfileService, ViewUsersService, SignUpService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
